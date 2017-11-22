@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for files in $(ls -l | grep -iv "\.old$" 2> /dev/null)
+do
+	mv "./$files" "./$files.old"
+done

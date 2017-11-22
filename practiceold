@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#practice oldfiles loops
+
+for files in $(ls -l $1 | grep -iv ".old")
+	do	
+	mv $1/$files $1/"${files}.old"
+	done

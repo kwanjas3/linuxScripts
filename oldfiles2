@@ -1,0 +1,12 @@
+#!/bin/bash
+#files in dir
+#filedir="ls $1"
+#revgrep="grep -v '\.old$'"
+for files in $(ls $1 | grep -v '\.old$') ##so i want the value of the ls argument but reverse grep it so i ca						skip the if statement. not sure what's wrong with my syntax,
+						# the -v is purple instead of yellow
+	#| grep -v '\.old$' 2> /dev/null)  
+	
+	do
+	mv $1/"${files}" $1/"${files}.old"
+	done
+

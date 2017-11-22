@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for files in $(ls -a $@)
+do
+	echo $files
+done

@@ -1,0 +1,20 @@
+sed command default prints all lines in the file you are looking in
+to prevent duplicate use -n option
+
+sed -n '[line numbers range seperated by comma/ string with /string/] mode' file
+
+ex.
+
+sed -n '3,5 p' cars
+prints lines 3-5 from file cars
+
+sed -n '/[Cc]hevy q' cars
+prints first line instance of Chevy or chevy then quits from file cars
+
+awk is similar to sed however the command defaults to print and is in {}
+
+awk 's/hello/hi {print 3,4}' cars
+substitutes hello string with hi in lines 3 and 4 from file cars
+
+awk -F":" '{print $3} cars
+sets delimiter to : and prints only field 3 from in file cars

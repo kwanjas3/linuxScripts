@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for file in $(ls "$1/"*.old); do
+	mv "$file" "${file%.old}"
+done

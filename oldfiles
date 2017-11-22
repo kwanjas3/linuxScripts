@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for files in $(ls $1)
+do
+	if [ ! $(echo $files | grep '\.old$') ]
+	then 
+	mv $1/"$files" $1/"${files}.old";
+	fi
+	done
+
